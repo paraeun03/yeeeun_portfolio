@@ -38,9 +38,9 @@ export function Hero() {
   const defaultInfo = {
     greeting: "안녕하세요,",
     name: "최예은",
-    title: "단국대 도시계획부동산학부",
+    title: "단국대 도시계획부동산학부 ",
     description: "부동산 프롭테크 포트폴리오 만들기",
-    profileImage: "/uploads/hero-profile-1761477237286.png",
+    profileImage: "/uploads/hero-profile-1762234490175.png",
     backgroundImage: "",
     backgroundVideo: "",
     backgroundOpacity: 0.1,
