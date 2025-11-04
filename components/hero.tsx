@@ -37,9 +37,9 @@ export function Hero() {
   
   const defaultInfo = {
     greeting: "안녕하세요,",
-    name: "정재훈",
-    title: "단국대 교수입니다",
-    description: "프롭테크 기술로 부동산 시장을 분석합니다.",
+    name: "최예은",
+    title: "단국대 도시계획부동산학부",
+    description: "부동산 프롭테크 포트폴리오 만들기",
     profileImage: "/uploads/hero-profile-1761477237286.png",
     backgroundImage: "",
     backgroundVideo: "",
