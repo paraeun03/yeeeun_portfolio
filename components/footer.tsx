@@ -29,7 +29,7 @@ export function Footer() {
     quickLinksTitle: "빠른 링크",
     showContactInfo: true,
     contactTitle: "연락처",
-    phone: "010-0000-0000",
+    phone: "010-9102-4324",
     email: "paraeun03@naver.com",
     location: "당신의 위치",
     copyright: "© 2025 최예은. All rights reserved.",
