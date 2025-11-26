@@ -31,7 +31,7 @@ export function Footer() {
     contactTitle: "연락처",
     phone: "010-9102-4324",
     email: "paraeun03@naver.com",
-    location: "당신의 위치",
+    location: "서울시 송파구",
     copyright: "© 2025 최예은. All rights reserved.",
     showMadeWith: true,
     madeWithLocation: "Mrbaeksang",
