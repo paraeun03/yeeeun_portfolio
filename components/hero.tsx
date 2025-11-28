@@ -61,13 +61,13 @@ export function Hero() {
     greeting: "살기 좋은 도시, 살아가는 부동산을 분석하는",
     name: "최예은",
     title: "단국대 도시계획부동산학부 재학생입니다",
-    description: "부동산 프롭테크 포트폴리오 만들기",
+    description: "저장이 안돼",
     profileImage: "/uploads/hero-profile-1763952312233.png",
     backgroundImage: "",
     backgroundVideo: "",
     backgroundOpacity: 0.1,
     projectButton: "프로젝트 보기",
-    background: { image: "", video: "", color: "#036635", opacity: 0.1 },
+    background: {"image":"","video":"","color":"#036635","opacity":0.1}
   }
 
   const [backgroundData, setBackgroundData] = useState<{
