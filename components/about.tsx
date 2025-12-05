@@ -419,7 +419,7 @@ export function About() {
           {(aboutInfo.hobbies.length > 0 || isEditMode) && (
             <div className="mt-16 text-center">
               <h3 className="text-2xl font-bold text-foreground mb-8">
-                취미 & 관심사
+                Insight Books
               </h3>
               <div className="flex flex-wrap justify-center gap-3">
                 {aboutInfo.hobbies.map((hobby, index) => (
