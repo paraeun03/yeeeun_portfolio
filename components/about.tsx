@@ -71,8 +71,8 @@ export function About() {
           {/* 바나나 이미지 */}
           <div className="relative h-56 md:h-72">
             <Image
-              src="/banana-image.jpg"   // "C:\Users\Jin&Sun\Desktop\바나나이미지.jpg"
-              alt="도시와 데이터를 바라보는 사람"
+              src="/바나나이미지.jpg"
+              alt="ai로 생성한 이미지입니다."
               fill
               className="object-cover rounded-3xl shadow-lg"
             />
@@ -86,11 +86,11 @@ export function About() {
           </h3>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {/* Book 1 */}
+            {/* 도시는 무엇으로 사는가 */}
             <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
               <div className="w-24 h-32 mb-4 relative">
                 <Image
-                  src="/books/book1.jpg"
+                  src="/도시는무엇으로사는가.png"
                   alt="Book 1"
                   fill
                   className="object-cover rounded-xl"
@@ -98,7 +98,8 @@ export function About() {
               </div>
               <p className="font-semibold mb-1">책 제목 1</p>
               <p className="text-xs text-muted-foreground text-center">
-                이 책에서 배운 핵심 인사이트 한두 문장을 적어둘 자리입니다.
+                활력있는 도시, 걷고싶은 도시, 교류가 있는 도시가 되려면 어떤요소가 필요한가 생각해보게 하는 책.
+                우리가 공간을 만들고, 공간이 우리를 만드는곳 도시.
               </p>
             </div>
 
