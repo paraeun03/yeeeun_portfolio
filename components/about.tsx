@@ -415,44 +415,56 @@ export function About() {
             </div>
           )}
 
-          {/* 취미 & 관심사 */}
-          {(aboutInfo.hobbies.length > 0 || isEditMode) && (
-            <div className="mt-16 text-center">
-              <h3 className="text-2xl font-bold text-foreground mb-8">
-                Insight Books
-              </h3>
-              <div className="flex flex-wrap justify-center gap-3">
-                {aboutInfo.hobbies.map((hobby, index) => (
-                  <span key={index} className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm relative group flex items-center justify-center">
-                    {isEditMode && (
-                      <button
-                        onClick={() => removeHobby(index)}
-                        className={`${COMMON_STYLES.deleteButton} opacity-0 group-hover:opacity-100 transition-opacity`}
-                      >
-                        <X className={COMMON_STYLES.deleteIcon} />
-                      </button>
-                    )}
-                    <EditableText
-                      value={hobby}
-                      onChange={(value) => updateHobby(index, value)}
-                      storageKey={`about-hobby-${index}`}
-                    />
-                  </span>
-                ))}
-                {isEditMode && (
-                  <button
-                    onClick={() => setShowHobbyModal(true)}
-                    className="px-4 py-2 border border-dashed border-muted-foreground/30 rounded-full text-sm hover:border-primary transition-all"
-                  >
-                    <Settings className="h-4 w-4 inline mr-1" />
-                    편집
-                  </button>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
+        {/* Insight Books */}
+<div className="mt-16 text-center">
+  <h3 className="text-2xl font-bold text-foreground mb-8">
+    Insight Books
+  </h3>
+
+  <div className="grid gap-6 md:grid-cols-3">
+
+    {/* Book 1 */}
+    <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
+      <img
+        src="/books/book1.jpg"
+        alt="Book 1"
+        className="w-24 h-32 object-cover rounded-xl mb-4"
+      />
+      <p className="font-semibold mb-1">책 제목 1</p>
+      <p className="text-xs text-muted-foreground text-center">
+        책 설명 한두 문장 적을 수 있는 자리입니다.
+      </p>
+    </div>
+
+    {/* Book 2 */}
+    <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
+      <img
+        src="/books/book2.jpg"
+        alt="Book 2"
+        className="w-24 h-32 object-cover rounded-xl mb-4"
+      />
+      <p className="font-semibold mb-1">책 제목 2</p>
+      <p className="text-xs text-muted-foreground text-center">
+        이 책에서 얻은 인사이트 한두 문장.
+      </p>
+    </div>
+
+    {/* Book 3 */}
+    <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
+      <img
+        src="/books/book3.jpg"
+        alt="Book 3"
+        className="w-24 h-32 object-cover rounded-xl mb-4"
+      />
+      <p className="font-semibold mb-1">책 제목 3</p>
+      <p className="text-xs text-muted-foreground text-center">
+        네가 이 책을 선택한 이유를 짧게 표현.
+      </p>
+    </div>
+
+  </div>
+</div>
+
       
       {/* 경험 카드 편집 모달 */}
       {showCareerModal && isEditMode && (
