@@ -98,11 +98,11 @@ export function About() {
   const defaultInfo = {
     title: "소개",
     subtitle: "인문사회적 소통 역량과 ai 활용 역량을 균형적으로 갖춘 인재입니다.",
-    background: {"image":"","video":"","color":"","opacity":0.1},
+    background: {"image":"","video":"","color":"#8db61b","opacity":0.1},
     experienceCards: [{"icon":"graduation","title":"단국대학교 도시계획부동산학부","period":"2022~","description":"도시계획, 부동산 복수전공"},{"icon":"shield","title":"R, Python 활용","period":"R 프로그래밍을 통한 빅데이터 수집 및 분석","description":"Python을 활용한 기초적 코딩 능력"},{"icon":"graduation","title":"독일 교환학생 파견","period":"2024.9~2025.2","description":"Nürtingen-Geislingen University (NGU)"}],
     skills: [{"icon":"pieChart","title":"빅데이터 분석","description":"R studio를 활용한 공공 모빌리티 데이터 분석"},{"icon":"globe","title":"글로벌 소통능력","description":"OPIC IH, IELTS 5.5"},{"icon":"users","title":"다수 팀 프로젝트 경험","description":"부동산 입지 분석, 도시재생사업 평가 등"}],
-    storyTitle: "나의 이야기",
-    story: ["저는 기술을 통해 사람들의 삶을 더 편리하고 의미 있게 만드는 일에 열정을 가지고 있습니다.","다양한 프로젝트를 통해 문제 해결 능력과 창의적인 사고를 키워왔으며, 팀원들과의 협업을 통해 함께 성장하는 가치를 배웠습니다.","앞으로도 지속적인 학습과 도전을 통해 더 나은 개발자가 되기 위해 노력하겠습니다."],
+    storyTitle: "Insight: \"공간의 가치를 넘어, 지속 가능한 도시의 미래를 설계합니다.\"",
+    story: ["단순히 살고 싶은 집을 그리는 것을 넘어, 우리가 살아갈 도시를 면밀히 분석합니다. 고객과 기업의 자산을 'Ownership' 으로 대하며 깊은 신뢰를 구축해나가겠습니다. 또한, 현실에 안주하지 않고 시장을 선도하는 혁신적, 창조적 가치를 창출하겠습니다."],
     storyImage: "",
     hobbies: ["📚 독서","☕ 카페 투어","🎨 전시회 관람","✈️ 여행"]
   }
