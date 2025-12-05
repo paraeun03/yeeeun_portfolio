@@ -356,118 +356,68 @@ export function About() {
             </div>
           )}
 
-          {/* 자기소개 상세 */}
-          {(aboutInfo.story.length > 0 || isEditMode) && (
-            <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    <EditableText
-                      value={aboutInfo.storyTitle}
-                      onChange={(value) => updateAboutInfo('storyTitle', value)}
-                      storageKey="about-storyTitle"
-                    />
-                  </h3>
-                  {aboutInfo.story.map((paragraph, index) => (
-                    <div key={index} className="relative mb-4">
-                      {isEditMode && (
-                        <button
-                          onClick={() => removeStory(index)}
-                          className={COMMON_STYLES.deleteButton}
-                        >
-                          <X className={COMMON_STYLES.deleteIcon} />
-                        </button>
-                      )}
-                      <p className="text-muted-foreground leading-relaxed">
-                        <EditableText
-                          value={paragraph}
-                          onChange={(value) => updateStory(index, value)}
-                          storageKey={`about-story-${index}`}
-                          multiline
-                        />
-                      </p>
-                    </div>
-                  ))}
-                  {isEditMode && (
-                    <button
-                      onClick={addStory}
-                      className="mt-2 px-4 py-2 border border-dashed border-muted-foreground/30 rounded-lg hover:border-primary transition-all"
-                    >
-                      <Plus className="h-4 w-4 inline mr-2" />
-                      문단 추가
-                    </button>
-                  )}
-                </div>
-                
-                {/* 이미지 영역 */}
-                <div className="relative w-full h-full min-h-[500px] lg:min-h-full">
-                  <EditableMedia
-                    src={aboutInfo.storyImage}
-                    onChange={(src) => updateAboutInfo('storyImage', src)}
-                    type="image"
-                    storageKey="about-storyImage"
-                    className="w-full h-full object-cover"
-                    alt="소개 이미지"
-                    purpose="about-image"
-                  />
-                </div>
-              </div>
-            </div>
-          )}
+                {/* 자기소개 상세 */}
+        {(aboutInfo.story.length > 0 || isEditMode) && (
+          <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
+            ...
+          </div>
+        )}
 
         {/* Insight Books */}
-<div className="mt-16 text-center">
-  <h3 className="text-2xl font-bold text-foreground mb-8">
-    Insight Books
-  </h3>
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl font-bold text-foreground mb-8">
+            Insight Books
+          </h3>
 
-  <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
+            {/* Book 1 */}
+            <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
+              <img
+                src="/books/book1.jpg"
+                alt="Book 1"
+                className="w-24 h-32 object-cover rounded-xl mb-4"
+              />
+              <p className="font-semibold mb-1">책 제목 1</p>
+              <p className="text-xs text-muted-foreground text-center">
+                책 설명 한두 문장 적을 수 있는 자리입니다.
+              </p>
+            </div>
 
-    {/* Book 1 */}
-    <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
-      <img
-        src="/books/book1.jpg"
-        alt="Book 1"
-        className="w-24 h-32 object-cover rounded-xl mb-4"
-      />
-      <p className="font-semibold mb-1">책 제목 1</p>
-      <p className="text-xs text-muted-foreground text-center">
-        책 설명 한두 문장 적을 수 있는 자리입니다.
-      </p>
-    </div>
+            {/* Book 2 */}
+            <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
+              <img
+                src="/books/book2.jpg"
+                alt="Book 2"
+                className="w-24 h-32 object-cover rounded-xl mb-4"
+              />
+              <p className="font-semibold mb-1">책 제목 2</p>
+              <p className="text-xs text-muted-foreground text-center">
+                이 책에서 얻은 인사이트 한두 문장.
+              </p>
+            </div>
 
-    {/* Book 2 */}
-    <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
-      <img
-        src="/books/book2.jpg"
-        alt="Book 2"
-        className="w-24 h-32 object-cover rounded-xl mb-4"
-      />
-      <p className="font-semibold mb-1">책 제목 2</p>
-      <p className="text-xs text-muted-foreground text-center">
-        이 책에서 얻은 인사이트 한두 문장.
-      </p>
-    </div>
+            {/* Book 3 */}
+            <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
+              <img
+                src="/books/book3.jpg"
+                alt="Book 3"
+                className="w-24 h-32 object-cover rounded-xl mb-4"
+              />
+              <p className="font-semibold mb-1">책 제목 3</p>
+              <p className="text-xs text-muted-foreground text-center">
+                네가 이 책을 선택한 이유를 짧게 표현.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    {/* Book 3 */}
-    <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
-      <img
-        src="/books/book3.jpg"
-        alt="Book 3"
-        className="w-24 h-32 object-cover rounded-xl mb-4"
-      />
-      <p className="font-semibold mb-1">책 제목 3</p>
-      <p className="text-xs text-muted-foreground text-center">
-        네가 이 책을 선택한 이유를 짧게 표현.
-      </p>
-    </div>
+        {/* 🔽 여기서 about 섹션과 컨테이너를 닫아줘야 함 */}
+        </div>
+      </section>
 
-  </div>
-</div>
-
-      
       {/* 경험 카드 편집 모달 */}
       {showCareerModal && isEditMode && (
+
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999]">
           <div className="bg-background border rounded-lg p-6 max-w-3xl w-full mx-4 max-h-[80vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-4">
