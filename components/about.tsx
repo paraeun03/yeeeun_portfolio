@@ -50,26 +50,33 @@ export function About() {
           </div>
         </div>
 
-        {/* 자기소개 스토리 */}
-        <div className="bg-background/60 rounded-3xl p-8 mb-16">
-          <h3 className="text-xl font-semibold mb-4">
-            Insight: &quot;공간의 가치를 넘어, 지속 가능한 도시의 미래를
-            설계합니다.&quot;
-          </h3>
-          <p className="text-sm leading-relaxed text-muted-foreground mb-2">
-            단순히 &quot;살고 싶은 집&quot;을 그리는 것을 넘어, 우리가 살아갈
-            도시와 그 안에서 움직이는 사람·자본·데이터의 흐름을 함께
-            바라봅니다.
-          </p>
-          <p className="text-sm leading-relaxed text-muted-foreground mb-2">
-            부동산과 도시를 &apos;자산&apos;이자 &apos;생활 인프라&apos;로
-            이해하며, 고객과 기업의 자산을 Ownership 관점에서 책임감 있게
-            다루고자 합니다.
-          </p>
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            현실에만 안주하지 않고, 데이터와 현장을 함께 읽어내며 시장을
-            선도하는 새로운 인사이트를 만드는 사람이 되고 싶습니다.
-          </p>
+      {/* 자기소개 스토리 + 이미지 */}
+        <div className="grid gap-8 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] items-center mb-16">
+          {/* 텍스트 박스 */}
+          <div className="bg-background/60 rounded-3xl p-8">
+            <h3 className="text-xl font-semibold mb-4">
+              Insight: "공간의 가치를 넘어, 지속 가능한 도시의 미래를 설계합니다."
+            </h3>
+            <p className="text-sm leading-relaxed text-muted-foreground mb-2">
+              단순히 "살고 싶은 집"을 그리는 것을 넘어, 우리가 살아갈 도시와 그 안에서 움직이는 사람·자본·데이터의 흐름을 함께 바라봅니다.
+            </p>
+            <p className="text-sm leading-relaxed text-muted-foreground mb-2">
+              부동산과 도시를 '자산'이자 '생활 인프라'로 이해하며, 고객과 기업의 자산을 Ownership 관점에서 책임감 있게 다루고자 합니다.
+            </p>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              현실에만 안주하지 않고, 데이터와 현장을 함께 읽어내며 시장을 선도하는 새로운 인사이트를 만드는 사람이 되고 싶습니다.
+            </p>
+          </div>
+
+          {/* 바나나 이미지 */}
+          <div className="relative h-56 md:h-72">
+            <Image
+              src="/banana-image.jpg"   // 👉 여기 경로만 네가 쓰던 파일 이름으로 맞춰주면 돼
+              alt="도시와 데이터를 바라보는 사람"
+              fill
+              className="object-cover rounded-3xl shadow-lg"
+            />
+          </div>
         </div>
 
         {/* Insight Books 섹션 */}
