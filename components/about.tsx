@@ -71,7 +71,7 @@ export function About() {
           {/* 바나나 이미지 */}
           <div className="relative h-56 md:h-72">
             <Image
-              src="/banana-image.jpg"   // 👉 여기 경로만 네가 쓰던 파일 이름으로 맞춰주면 돼
+              src="/banana-image.jpg"   // "C:\Users\Jin&Sun\Desktop\바나나이미지.jpg"
               alt="도시와 데이터를 바라보는 사람"
               fill
               className="object-cover rounded-3xl shadow-lg"
