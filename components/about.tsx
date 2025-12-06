@@ -85,4 +85,9 @@ export function About() {
 
             {/* 스킬 2 */}
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary
+              <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                <PieChart className="h-8 w-8 text-primary" />
+              </div>
+              <h4 className="font-semibold text-foreground mb-2">안녕</h4>
+              <p className="text-sm text-muted-foreground">ㅋㅋ</p>
+            </div>
