@@ -8,6 +8,28 @@ import {
 } from "lucide-react"
 
 export function About() {
+  // 책 데이터 관리 (여기서 내용을 수정하면 화면에 반영됩니다)
+  const books = [
+    {
+      id: 1,
+      title: "도시는 무엇으로 사는가",
+      desc: "도시와 교류하는 법, 소통하는 도시가 되는 법을 알게해주는 책. 도시는 하나의 유기체로 도시구성요소 간 끊임없는 상호작용을 주고 받는 곳",
+      image: "/uploads/도시는무엇으로사는가.png", // 이미지 경로
+    },
+    {
+      id: 2,
+      title: "책 제목 2",
+      desc: "책에 대한 간단한 설명",
+      image: "", // 이미지가 없으면 빈 따옴표
+    },
+    {
+      id: 3,
+      title: "책 제목 3",
+      desc: "책에 대한 간단한 설명",
+      image: "", // 이미지가 없으면 빈 따옴표
+    },
+  ]
+
   return (
     <section id="about" className="w-full py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,17 +152,27 @@ export function About() {
           </div>
         </div>
 
-        {/* 5. Insight Books (선택 사항) */}
+        {/* 5. Insight Books (수정됨) */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-foreground mb-8">Insight Books</h3>
           <div className="grid gap-6 md:grid-cols-3">
-            {[1, 2, 3].map((num) => (
-              <div key={num} className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
-                <div className="w-24 h-32 bg-muted rounded-xl mb-4 flex items-center justify-center text-xs">
-                  Book Cover
-                </div>
-                <p className="font-semibold mb-1">책 제목 {num}</p>
-                <p className="text-xs text-muted-foreground">책에 대한 간단한 설명</p>
+            {books.map((book) => (
+              <div key={book.id} className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm hover:shadow-md transition-shadow">
+                {/* 이미지가 있으면 이미지 표시, 없으면 회색 박스 표시 */}
+                {book.image ? (
+                  <img 
+                    src={book.image} 
+                    alt={book.title} 
+                    className="w-24 h-32 object-cover rounded-xl mb-4 shadow-sm"
+                  />
+                ) : (
+                  <div className="w-24 h-32 bg-muted rounded-xl mb-4 flex items-center justify-center text-xs text-muted-foreground">
+                    Book Cover
+                  </div>
+                )}
+                
+                <p className="font-semibold mb-1">{book.title}</p>
+                <p className="text-xs text-muted-foreground">{book.desc}</p>
               </div>
             ))}
           </div>
