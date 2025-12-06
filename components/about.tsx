@@ -7,15 +7,6 @@ import {
   Users,
 } from "lucide-react"
 
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  GraduationCap,
-  Shield,
-  PieChart,
-  Globe,
-  Users,
-} from "lucide-react"
-
 export function About() {
   return (
     <section id="about" className="w-full py-20 bg-muted/30">
