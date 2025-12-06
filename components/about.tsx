@@ -91,3 +91,4 @@ export function About() {
               <h4 className="font-semibold text-foreground mb-2">안녕</h4>
               <p className="text-sm text-muted-foreground">ㅋㅋ</p>
             </div>
+          </div>
