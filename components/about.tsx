@@ -111,7 +111,7 @@ export function About() {
                 <Globe className="h-8 w-8 text-primary" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">글로벌 소통능력</h4>
-              <p className="text-sm text-muted-foreground">OPIC IH, IELTS 5.5</p>
+              <p className="text-sm text-muted-foreground">OPIC IH</p>
             </div>
 
             {/* 스킬 3 */}
