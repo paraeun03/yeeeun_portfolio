@@ -7,6 +7,15 @@ import {
   Users,
 } from "lucide-react"
 
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  GraduationCap,
+  Shield,
+  PieChart,
+  Globe,
+  Users,
+} from "lucide-react"
+
 export function About() {
   return (
     <section id="about" className="w-full py-20 bg-muted/30">
@@ -86,9 +95,67 @@ export function About() {
             {/* 스킬 2 */}
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                <PieChart className="h-8 w-8 text-primary" />
+                <Globe className="h-8 w-8 text-primary" />
               </div>
-              <h4 className="font-semibold text-foreground mb-2">안녕</h4>
-              <p className="text-sm text-muted-foreground">ㅋㅋ</p>
+              <h4 className="font-semibold text-foreground mb-2">글로벌 소통능력</h4>
+              <p className="text-sm text-muted-foreground">OPIC IH, IELTS 5.5</p>
+            </div>
+
+            {/* 스킬 3 */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                <Users className="h-8 w-8 text-primary" />
+              </div>
+              <h4 className="font-semibold text-foreground mb-2">다수 팀 프로젝트 경험</h4>
+              <p className="text-sm text-muted-foreground">부동산 입지 분석, 도시재생사업 평가 등</p>
             </div>
           </div>
+        </div>
+
+        {/* 4. 스토리 (Insight) - 바나나 이미지 포함 */}
+        <div className="bg-card rounded-2xl shadow-lg overflow-hidden mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Insight: "공간의 가치를 넘어, 지속 가능한 도시의 미래를 설계합니다."
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                단순히 살고 싶은 집을 그리는 것을 넘어, 우리가 살아갈 도시를 면밀히 분석합니다.
+                고객과 기업의 자산을 'Ownership' 으로 대하며 깊은 신뢰를 구축해나가겠습니다.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                또한, 현실에 안주하지 않고 시장을 선도하는 혁신적, 창조적 가치를 창출하겠습니다.
+              </p>
+            </div>
+
+            {/* 이미지 영역 */}
+            <div className="bg-muted h-64 lg:h-auto min-h-[300px] flex items-center justify-center overflow-hidden">
+               <img 
+                 src="/uploads/바나나이미지.jpg" 
+                 alt="Insight 이미지" 
+                 className="w-full h-full object-cover" 
+               />
+            </div>
+          </div>
+        </div>
+
+        {/* 5. Insight Books (선택 사항) */}
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-foreground mb-8">Insight Books</h3>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[1, 2, 3].map((num) => (
+              <div key={num} className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
+                <div className="w-24 h-32 bg-muted rounded-xl mb-4 flex items-center justify-center text-xs">
+                  Book Cover
+                </div>
+                <p className="font-semibold mb-1">책 제목 {num}</p>
+                <p className="text-xs text-muted-foreground">책에 대한 간단한 설명</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+  )
+}
