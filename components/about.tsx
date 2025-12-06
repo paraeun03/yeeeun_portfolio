@@ -3,7 +3,75 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Briefcase, GraduationCap, Award, Heart, Coffee, Book, Plus, X, Settings, Calendar, Building, User, Trophy, Star, Lightbulb, Target, Rocket, Shield, Sparkles, Code, Database, Palette, Megaphone, BarChart3, LineChart, PieChart, Activity, Brain, Cpu, Layers, Package, Server, Smartphone, Monitor, Wifi, Cloud, Lock, Key, Eye, Search, Filter, Edit, FileText, FolderOpen, GitBranch, Hash, Inbox, Send, MessageSquare, Music, Camera, Video, Mic, Volume2, Headphones, Radio, Zap, Globe, Users, TrendingUp, BookOpen, MapPin, Clock, CheckCircle, AlertCircle, Home, School } from "lucide-react"
+import {
+  Briefcase,
+  GraduationCap,
+  Award,
+  Heart,
+  Coffee,
+  Book,
+  Plus,
+  X,
+  Settings,
+  Calendar,
+  Building,
+  User,
+  Trophy,
+  Star,
+  Lightbulb,
+  Target,
+  Rocket,
+  Shield,
+  Sparkles,
+  Code,
+  Database,
+  Palette,
+  Megaphone,
+  BarChart3,
+  LineChart,
+  PieChart,
+  Activity,
+  Brain,
+  Cpu,
+  Layers,
+  Package,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Cloud,
+  Lock,
+  Key,
+  Eye,
+  Search,
+  Filter,
+  Edit,
+  FileText,
+  FolderOpen,
+  GitBranch,
+  Hash,
+  Inbox,
+  Send,
+  MessageSquare,
+  Music,
+  Camera,
+  Video,
+  Mic,
+  Volume2,
+  Headphones,
+  Radio,
+  Zap,
+  Globe,
+  Users,
+  TrendingUp,
+  BookOpen,
+  MapPin,
+  Clock,
+  CheckCircle,
+  AlertCircle,
+  Home,
+  School,
+} from "lucide-react"
 import { EditableText } from "@/components/editable/editable-text"
 import { EditableMedia } from "@/components/editable/editable-media"
 import { EditableBackground } from "@/components/editable/editable-background"
@@ -94,110 +162,176 @@ const SKILL_ICONS = {
 
 export function About() {
   const { getData, saveData, isEditMode, saveToFile } = useInlineEditor()
+
   // 기본 데이터
   const defaultInfo = {
     title: "소개",
     subtitle: "인문사회적 소통 역량과 ai 활용 역량을 균형적으로 갖춘 인재입니다.",
-    background: {"image":"","video":"","color":"#8db61b","opacity":0.1},
-    experienceCards: [{"icon":"graduation","title":"단국대학교 도시계획부동산학부","period":"2022~","description":"도시계획, 부동산 복수전공"},{"icon":"shield","title":"R, Python 활용","period":"R 프로그래밍을 통한 빅데이터 수집 및 분석","description":"Python을 활용한 기초적 코딩 능력"},{"icon":"graduation","title":"독일 교환학생 파견","period":"2024.9~2025.2","description":"Nürtingen-Geislingen University (NGU)"}],
-    skills: [{"icon":"pieChart","title":"빅데이터 분석","description":"R studio를 활용한 공공 모빌리티 데이터 분석"},{"icon":"globe","title":"글로벌 소통능력","description":"OPIC IH, IELTS 5.5"},{"icon":"users","title":"다수 팀 프로젝트 경험","description":"부동산 입지 분석, 도시재생사업 평가 등"}],
-    storyTitle: "Insight: \"공간의 가치를 넘어, 지속 가능한 도시의 미래를 설계합니다.\"",
-    story: ["단순히 살고 싶은 집을 그리는 것을 넘어, 우리가 살아갈 도시를 면밀히 분석합니다. 고객과 기업의 자산을 'Ownership' 으로 대하며 깊은 신뢰를 구축해나가겠습니다. 또한, 현실에 안주하지 않고 시장을 선도하는 혁신적, 창조적 가치를 창출하겠습니다."],
+    background: { image: "", video: "", color: "#8db61b", opacity: 0.1 },
+    experienceCards: [
+      {
+        icon: "graduation",
+        title: "단국대학교 도시계획부동산학부",
+        period: "2022~",
+        description: "도시계획, 부동산 복수전공",
+      },
+      {
+        icon: "shield",
+        title: "R, Python 활용",
+        period: "R 프로그래밍을 통한 빅데이터 수집 및 분석",
+        description: "Python을 활용한 기초적 코딩 능력",
+      },
+      {
+        icon: "graduation",
+        title: "독일 교환학생 파견",
+        period: "2024.9~2025.2",
+        description: "Nürtingen-Geislingen University (NGU)",
+      },
+    ],
+    skills: [
+      {
+        icon: "pieChart",
+        title: "빅데이터 분석",
+        description: "R studio를 활용한 공공 모빌리티 데이터 분석",
+      },
+      {
+        icon: "globe",
+        title: "글로벌 소통능력",
+        description: "OPIC IH, IELTS 5.5",
+      },
+      {
+        icon: "users",
+        title: "다수 팀 프로젝트 경험",
+        description: "부동산 입지 분석, 도시재생사업 평가 등",
+      },
+    ],
+    storyTitle: 'Insight: "공간의 가치를 넘어, 지속 가능한 도시의 미래를 설계합니다."',
+    story: [
+      "단순히 살고 싶은 집을 그리는 것을 넘어, 우리가 살아갈 도시를 면밀히 분석합니다. 고객과 기업의 자산을 'Ownership' 으로 대하며 깊은 신뢰를 구축해나가겠습니다. 또한, 현실에 안주하지 않고 시장을 선도하는 혁신적, 창조적 가치를 창출하겠습니다.",
+    ],
     storyImage: "",
-    hobbies: ["📚 독서","☕ 카페 투어","🎨 전시회 관람","✈️ 여행"]
+    hobbies: ["📚 독서", "☕ 카페 투어", "🎨 전시회 관람", "✈️ 여행"],
   }
-  
+
   const [aboutInfo, setAboutInfo] = useState(defaultInfo)
-  const [backgroundData, setBackgroundData] = useState(
-    defaultInfo.background
-  )
+  const [backgroundData, setBackgroundData] = useState(defaultInfo.background)
   const [showCareerModal, setShowCareerModal] = useState(false)
   const [showSkillModal, setShowSkillModal] = useState(false)
   const [showHobbyModal, setShowHobbyModal] = useState(false)
-  
+
   // localStorage에서 데이터 로드 - 편집 모드가 변경될 때마다 실행
   useEffect(() => {
-    const savedData = getData('about-info') as typeof defaultInfo | null
+    const savedData = getData("about-info") as typeof defaultInfo | null
     if (savedData) {
       setAboutInfo({ ...defaultInfo, ...savedData })
-      // background 데이터가 있으면 설정
       if (savedData.background) {
         setBackgroundData(savedData.background)
       }
     }
-    
-    const savedBg = getData('about-background') as { image: string; video: string; color: string; opacity: number } | null
+
+    const savedBg = getData("about-background") as
+      | { image: string; video: string; color: string; opacity: number }
+      | null
     if (savedBg) {
       setBackgroundData(savedBg)
     }
-  }, [isEditMode]) // isEditMode가 변경될 때마다 데이터 다시 로드
-  
-  const updateAboutInfo = (key: string, value: string | boolean | typeof aboutInfo.skills | typeof aboutInfo.experienceCards | typeof aboutInfo.story | typeof aboutInfo.hobbies | number) => {
+  }, [isEditMode])
+
+  const updateAboutInfo = (
+    key: string,
+    value:
+      | string
+      | boolean
+      | typeof aboutInfo.skills
+      | typeof aboutInfo.experienceCards
+      | typeof aboutInfo.story
+      | typeof aboutInfo.hobbies
+      | number,
+  ) => {
     const newInfo = { ...aboutInfo, [key]: value }
     setAboutInfo(newInfo)
-    saveData('about-info', newInfo)
+    saveData("about-info", newInfo)
   }
-  
+
   const updateExperienceCard = (index: number, field: string, value: string) => {
     const newCards = [...aboutInfo.experienceCards]
     newCards[index] = { ...newCards[index], [field]: value }
-    updateAboutInfo('experienceCards', newCards)
+    updateAboutInfo("experienceCards", newCards)
   }
-  
+
   const addExperienceCard = () => {
-    updateAboutInfo('experienceCards', [...aboutInfo.experienceCards, { 
-      icon: "briefcase", 
-      title: "새 경험", 
-      period: "2024", 
-      description: "설명을 입력하세요" 
-    }])
+    updateAboutInfo("experienceCards", [
+      ...aboutInfo.experienceCards,
+      {
+        icon: "briefcase",
+        title: "새 경험",
+        period: "2024",
+        description: "설명을 입력하세요",
+      },
+    ])
   }
-  
+
   const removeExperienceCard = (index: number) => {
-    updateAboutInfo('experienceCards', aboutInfo.experienceCards.filter((_, i) => i !== index))
+    updateAboutInfo(
+      "experienceCards",
+      aboutInfo.experienceCards.filter((_, i) => i !== index),
+    )
   }
-  
+
   const updateSkill = (index: number, field: string, value: string) => {
     const newSkills = [...aboutInfo.skills]
     newSkills[index] = { ...newSkills[index], [field]: value }
-    updateAboutInfo('skills', newSkills)
+    updateAboutInfo("skills", newSkills)
   }
-  
+
   const addSkill = () => {
-    updateAboutInfo('skills', [...aboutInfo.skills, { icon: "star", title: "새 스킬", description: "스킬 설명" }])
+    updateAboutInfo("skills", [
+      ...aboutInfo.skills,
+      { icon: "star", title: "새 스킬", description: "스킬 설명" },
+    ])
   }
-  
+
   const removeSkill = (index: number) => {
-    updateAboutInfo('skills', aboutInfo.skills.filter((_, i) => i !== index))
+    updateAboutInfo(
+      "skills",
+      aboutInfo.skills.filter((_, i) => i !== index),
+    )
   }
-  
+
   const updateStory = (index: number, value: string) => {
     const newStory = [...aboutInfo.story]
     newStory[index] = value
-    updateAboutInfo('story', newStory)
+    updateAboutInfo("story", newStory)
   }
-  
+
   const addStory = () => {
-    updateAboutInfo('story', [...aboutInfo.story, "새로운 문단"])
+    updateAboutInfo("story", [...aboutInfo.story, "새로운 문단"])
   }
-  
+
   const removeStory = (index: number) => {
-    updateAboutInfo('story', aboutInfo.story.filter((_, i) => i !== index))
+    updateAboutInfo(
+      "story",
+      aboutInfo.story.filter((_, i) => i !== index),
+    )
   }
-  
+
   const updateHobby = (index: number, value: string) => {
     const newHobbies = [...aboutInfo.hobbies]
     newHobbies[index] = value
-    updateAboutInfo('hobbies', newHobbies)
+    updateAboutInfo("hobbies", newHobbies)
   }
-  
+
   const addHobby = () => {
-    updateAboutInfo('hobbies', [...aboutInfo.hobbies, "🎯 새 취미"])
+    updateAboutInfo("hobbies", [...aboutInfo.hobbies, "🎯 새 취미"])
   }
-  
+
   const removeHobby = (index: number) => {
-    updateAboutInfo('hobbies', aboutInfo.hobbies.filter((_, i) => i !== index))
+    updateAboutInfo(
+      "hobbies",
+      aboutInfo.hobbies.filter((_, i) => i !== index),
+    )
   }
+
   return (
     <EditableBackground
       image={backgroundData.image}
@@ -207,12 +341,11 @@ export function About() {
       onChange={(data) => {
         const newData = { ...backgroundData, ...data }
         setBackgroundData(newData)
-        saveData('about-background', newData)
-        
-        // aboutInfo도 업데이트 (파일 저장을 위해)
+        saveData("about-background", newData)
+
         const updatedAboutInfo = { ...aboutInfo, background: newData }
         setAboutInfo(updatedAboutInfo)
-        saveData('about-info', updatedAboutInfo)
+        saveData("about-info", updatedAboutInfo)
       }}
       storageKey="about-background"
       className="py-20 bg-muted/30 relative"
@@ -224,27 +357,31 @@ export function About() {
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               <EditableText
                 value={aboutInfo.title}
-                onChange={(value) => updateAboutInfo('title', value)}
+                onChange={(value) => updateAboutInfo("title", value)}
                 storageKey="about-title"
               />
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               <EditableText
                 value={aboutInfo.subtitle}
-                onChange={(value) => updateAboutInfo('subtitle', value)}
+                onChange={(value) => updateAboutInfo("subtitle", value)}
                 storageKey="about-subtitle"
                 multiline
               />
             </p>
           </div>
 
-          {/* 경험 카드 (경력/학력/자격증 등) */}
+          {/* 경험 카드 */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {/* 경험 카드들 */}
             {aboutInfo.experienceCards?.map((card, index) => {
-              const Icon = AVAILABLE_ICONS[card.icon as keyof typeof AVAILABLE_ICONS] || Briefcase
+              const Icon =
+                AVAILABLE_ICONS[card.icon as keyof typeof AVAILABLE_ICONS] ||
+                Briefcase
               return (
-                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 relative">
+                <Card
+                  key={index}
+                  className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 relative"
+                >
                   <CardContent className="p-6">
                     {isEditMode && (
                       <button
@@ -262,21 +399,27 @@ export function About() {
                         <h3 className="font-semibold text-foreground mb-1">
                           <EditableText
                             value={card.title}
-                            onChange={(value) => updateExperienceCard(index, 'title', value)}
+                            onChange={(value) =>
+                              updateExperienceCard(index, "title", value)
+                            }
                             storageKey={`about-experience-${index}-title`}
                           />
                         </h3>
                         <p className="text-sm text-primary mb-2">
                           <EditableText
                             value={card.period}
-                            onChange={(value) => updateExperienceCard(index, 'period', value)}
+                            onChange={(value) =>
+                              updateExperienceCard(index, "period", value)
+                            }
                             storageKey={`about-experience-${index}-period`}
                           />
                         </p>
                         <p className="text-sm text-muted-foreground">
                           <EditableText
                             value={card.description}
-                            onChange={(value) => updateExperienceCard(index, 'description', value)}
+                            onChange={(value) =>
+                              updateExperienceCard(index, "description", value)
+                            }
                             storageKey={`about-experience-${index}-description`}
                           />
                         </p>
@@ -286,15 +429,18 @@ export function About() {
                 </Card>
               )
             })}
-            
-            {/* 추가 버튼 */}
+
             {isEditMode && (
-              <Card className="border-2 border-dashed border-muted-foreground/30 shadow-none hover:border-primary transition-all cursor-pointer"
-                    onClick={() => setShowCareerModal(true)}>
+              <Card
+                className="border-2 border-dashed border-muted-foreground/30 shadow-none hover:border-primary transition-all cursor-pointer"
+                onClick={() => setShowCareerModal(true)}
+              >
                 <CardContent className="p-6 flex items-center justify-center">
                   <div className="text-center">
                     <Settings className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">경험 카드 편집</p>
+                    <p className="text-sm text-muted-foreground">
+                      경험 카드 편집
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -309,7 +455,9 @@ export function About() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {aboutInfo.skills.map((skill, index) => {
-                  const Icon = SKILL_ICONS[skill.icon as keyof typeof SKILL_ICONS] || Trophy
+                  const Icon =
+                    SKILL_ICONS[skill.icon as keyof typeof SKILL_ICONS] ||
+                    Trophy
                   return (
                     <div key={index} className="text-center relative">
                       {isEditMode && (
@@ -326,14 +474,18 @@ export function About() {
                       <h4 className="font-semibold text-foreground mb-2">
                         <EditableText
                           value={skill.title}
-                          onChange={(value) => updateSkill(index, 'title', value)}
+                          onChange={(value) =>
+                            updateSkill(index, "title", value)
+                          }
                           storageKey={`about-skill-${index}-title`}
                         />
                       </h4>
                       <p className="text-sm text-muted-foreground">
                         <EditableText
                           value={skill.description}
-                          onChange={(value) => updateSkill(index, 'description', value)}
+                          onChange={(value) =>
+                            updateSkill(index, "description", value)
+                          }
                           storageKey={`about-skill-${index}-description`}
                           multiline
                         />
@@ -342,13 +494,15 @@ export function About() {
                   )
                 })}
                 {isEditMode && (
-                  <div 
+                  <div
                     className="text-center border-2 border-dashed border-muted-foreground/30 rounded-lg p-6 flex items-center justify-center cursor-pointer hover:border-primary transition-all"
                     onClick={() => setShowSkillModal(true)}
                   >
                     <div>
                       <Settings className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
-                      <p className="text-sm text-muted-foreground">스킬 편집</p>
+                      <p className="text-sm text-muted-foreground">
+                        스킬 편집
+                      </p>
                     </div>
                   </div>
                 )}
@@ -356,68 +510,119 @@ export function About() {
             </div>
           )}
 
-                {/* 자기소개 상세 */}
-        {(aboutInfo.story.length > 0 || isEditMode) && (
-          <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
-            ...
+          {/* 자기소개 상세 */}
+          {(aboutInfo.story.length > 0 || isEditMode) && (
+            <div className="bg-card rounded-2xl shadow-lg overflow-hidden mb-16">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">
+                    <EditableText
+                      value={aboutInfo.storyTitle}
+                      onChange={(value) =>
+                        updateAboutInfo("storyTitle", value)
+                      }
+                      storageKey="about-storyTitle"
+                    />
+                  </h3>
+                  {aboutInfo.story.map((paragraph, index) => (
+                    <div key={index} className="relative mb-4">
+                      {isEditMode && (
+                        <button
+                          onClick={() => removeStory(index)}
+                          className={COMMON_STYLES.deleteButton}
+                        >
+                          <X className={COMMON_STYLES.deleteIcon} />
+                        </button>
+                      )}
+                      <p className="text-muted-foreground leading-relaxed">
+                        <EditableText
+                          value={paragraph}
+                          onChange={(value) => updateStory(index, value)}
+                          storageKey={`about-story-${index}`}
+                          multiline
+                        />
+                      </p>
+                    </div>
+                  ))}
+                  {isEditMode && (
+                    <button
+                      onClick={addStory}
+                      className="mt-2 px-4 py-2 border border-dashed border-muted-foreground/30 rounded-lg hover:border-primary transition-all"
+                    >
+                      <Plus className="h-4 w-4 inline mr-2" />
+                      문단 추가
+                    </button>
+                  )}
+                </div>
+
+                {/* 이미지 영역 */}
+                <div className="relative w-full h-full min-h-[300px] lg:min-h-full">
+                  <EditableMedia
+                    src={aboutInfo.storyImage}
+                    onChange={(src) => updateAboutInfo("storyImage", src)}
+                    type="image"
+                    storageKey="about-storyImage"
+                    className="w-full h-full object-cover"
+                    alt="소개 이미지"
+                    purpose="about-image"
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Insight Books */}
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-bold text-foreground mb-8">
+              Insight Books
+            </h3>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              {/* Book 1 */}
+              <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
+                <img
+                  src="/books/book1.jpg"
+                  alt="Book 1"
+                  className="w-24 h-32 object-cover rounded-xl mb-4"
+                />
+                <p className="font-semibold mb-1">책 제목 1</p>
+                <p className="text-xs text-muted-foreground text-center">
+                  책 설명 한두 문장 적을 수 있는 자리입니다.
+                </p>
+              </div>
+
+              {/* Book 2 */}
+              <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
+                <img
+                  src="/books/book2.jpg"
+                  alt="Book 2"
+                  className="w-24 h-32 object-cover rounded-xl mb-4"
+                />
+                <p className="font-semibold mb-1">책 제목 2</p>
+                <p className="text-xs text-muted-foreground text-center">
+                  이 책에서 얻은 인사이트 한두 문장.
+                </p>
+              </div>
+
+              {/* Book 3 */}
+              <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
+                <img
+                  src="/books/book3.jpg"
+                  alt="Book 3"
+                  className="w-24 h-32 object-cover rounded-xl mb-4"
+                />
+                <p className="font-semibold mb-1">책 제목 3</p>
+                <p className="text-xs text-muted-foreground text-center">
+                  네가 이 책을 선택한 이유를 짧게 표현.
+                </p>
+              </div>
+            </div>
           </div>
-        )}
-
-        {/* Insight Books */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-foreground mb-8">
-            Insight Books
-          </h3>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {/* Book 1 */}
-            <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
-              <img
-                src="/books/book1.jpg"
-                alt="Book 1"
-                className="w-24 h-32 object-cover rounded-xl mb-4"
-              />
-              <p className="font-semibold mb-1">책 제목 1</p>
-              <p className="text-xs text-muted-foreground text-center">
-                책 설명 한두 문장 적을 수 있는 자리입니다.
-              </p>
-            </div>
-
-            {/* Book 2 */}
-            <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
-              <img
-                src="/books/book2.jpg"
-                alt="Book 2"
-                className="w-24 h-32 object-cover rounded-xl mb-4"
-              />
-              <p className="font-semibold mb-1">책 제목 2</p>
-              <p className="text-xs text-muted-foreground text-center">
-                이 책에서 얻은 인사이트 한두 문장.
-              </p>
-            </div>
-
-            {/* Book 3 */}
-            <div className="bg-muted/40 rounded-3xl p-6 flex flex-col items-center shadow-sm">
-              <img
-                src="/books/book3.jpg"
-                alt="Book 3"
-                className="w-24 h-32 object-cover rounded-xl mb-4"
-              />
-              <p className="font-semibold mb-1">책 제목 3</p>
-              <p className="text-xs text-muted-foreground text-center">
-                네가 이 책을 선택한 이유를 짧게 표현.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* 🔽 여기서 about 섹션과 컨테이너를 닫아줘야 함 */}
         </div>
       </section>
 
       {/* 경험 카드 편집 모달 */}
       {showCareerModal && isEditMode && (
-
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999]">
           <div className="bg-background border rounded-lg p-6 max-w-3xl w-full mx-4 max-h-[80vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-4">
@@ -429,16 +634,24 @@ export function About() {
                 <X className="h-5 w-5" />
               </button>
             </div>
-            
+
             <div className="space-y-3">
               {aboutInfo.experienceCards?.map((card, index) => {
-                const Icon = AVAILABLE_ICONS[card.icon as keyof typeof AVAILABLE_ICONS] || Briefcase
+                const Icon =
+                  AVAILABLE_ICONS[
+                    card.icon as keyof typeof AVAILABLE_ICONS
+                  ] || Briefcase
                 return (
-                  <div key={index} className="flex items-start gap-3 p-3 border rounded-lg bg-muted/30">
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 p-3 border rounded-lg bg-muted/30"
+                  >
                     {/* 아이콘 선택 */}
                     <select
                       value={card.icon}
-                      onChange={(e) => updateExperienceCard(index, 'icon', e.target.value)}
+                      onChange={(e) =>
+                        updateExperienceCard(index, "icon", e.target.value)
+                      }
                       className="w-40 px-2 py-2 border rounded-lg bg-background"
                     >
                       <option value="briefcase">💼 직장</option>
@@ -456,37 +669,50 @@ export function About() {
                       <option value="heart">❤️ 열정</option>
                       <option value="coffee">☕ 일상</option>
                       <option value="user">👤 개인</option>
-                    </select
->
-                    
+                    </select>
+
                     <div className="flex-1 space-y-2">
                       <input
                         type="text"
                         value={card.title}
-                        onChange={(e) => updateExperienceCard(index, 'title', e.target.value)}
+                        onChange={(e) =>
+                          updateExperienceCard(index, "title", e.target.value)
+                        }
                         placeholder="예: ABC 회사, 서울대학교, 구글 자격증"
                         className="w-full px-3 py-2 border rounded-lg bg-background font-semibold"
                       />
-                      
+
                       <div className="flex gap-2">
                         <input
                           type="text"
                           value={card.period}
-                          onChange={(e) => updateExperienceCard(index, 'period', e.target.value)}
+                          onChange={(e) =>
+                            updateExperienceCard(
+                              index,
+                              "period",
+                              e.target.value,
+                            )
+                          }
                           placeholder="예: 2020 - 현재"
                           className="flex-1 px-3 py-2 border rounded-lg bg-background"
                         />
-                        
+
                         <input
                           type="text"
                           value={card.description}
-                          onChange={(e) => updateExperienceCard(index, 'description', e.target.value)}
+                          onChange={(e) =>
+                            updateExperienceCard(
+                              index,
+                              "description",
+                              e.target.value,
+                            )
+                          }
                           placeholder="예: 마케팅 매니저, 경영학 학사, GAIQ 인증"
                           className="flex-1 px-3 py-2 border rounded-lg bg-background"
                         />
                       </div>
                     </div>
-                    
+
                     <button
                       onClick={() => removeExperienceCard(index)}
                       className="p-2 text-destructive hover:bg-destructive/10 rounded-lg"
@@ -496,7 +722,7 @@ export function About() {
                   </div>
                 )
               })}
-              
+
               <button
                 onClick={addExperienceCard}
                 className="w-full py-3 border-2 border-dashed rounded-lg hover:border-primary hover:bg-primary/5 transition-all"
@@ -505,7 +731,7 @@ export function About() {
                 카드 추가
               </button>
             </div>
-            
+
             <div className="mt-6 pt-4 border-t">
               <div className="flex gap-2">
                 <button
@@ -516,12 +742,12 @@ export function About() {
                 </button>
                 <button
                   onClick={async () => {
-                    const success = await saveToFile('about', 'Info', aboutInfo)
+                    const success = await saveToFile("about", "Info", aboutInfo)
                     if (success) {
-                      alert('✅ 소개 설정이 파일에 저장되었습니다!')
+                      alert("✅ 소개 설정이 파일에 저장되었습니다!")
                       setShowCareerModal(false)
                     } else {
-                      alert('❌ 파일 저장에 실패했습니다.')
+                      alert("❌ 파일 저장에 실패했습니다.")
                     }
                   }}
                   className="flex-1 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 font-medium"
@@ -533,7 +759,7 @@ export function About() {
           </div>
         </div>
       )}
-      
+
       {/* 스킬 편집 모달 */}
       {showSkillModal && isEditMode && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[2147483647]">
@@ -547,20 +773,26 @@ export function About() {
                 <X className="h-5 w-5" />
               </button>
             </div>
-            
+
             <div className="space-y-3">
               {aboutInfo.skills.map((skill, index) => {
-                const Icon = SKILL_ICONS[skill.icon as keyof typeof SKILL_ICONS] || Trophy
+                const Icon =
+                  SKILL_ICONS[skill.icon as keyof typeof SKILL_ICONS] ||
+                  Trophy
                 return (
-                  <div key={index} className="flex items-start gap-3 p-3 border rounded-lg bg-muted/30">
-                    {/* 아이콘 선택 */}
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 p-3 border rounded-lg bg-muted/30"
+                  >
                     <div className="flex flex-col items-center gap-2">
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
                       <select
                         value={skill.icon}
-                        onChange={(e) => updateSkill(index, 'icon', e.target.value)}
+                        onChange={(e) =>
+                          updateSkill(index, "icon", e.target.value)
+                        }
                         className="w-32 px-2 py-1 text-xs border rounded-lg bg-background"
                       >
                         <optgroup label="기술 스킬">
@@ -602,25 +834,29 @@ export function About() {
                         </optgroup>
                       </select>
                     </div>
-                    
+
                     <div className="flex-1 space-y-2">
                       <input
                         type="text"
                         value={skill.title}
-                        onChange={(e) => updateSkill(index, 'title', e.target.value)}
+                        onChange={(e) =>
+                          updateSkill(index, "title", e.target.value)
+                        }
                         placeholder="예: 프론트엔드 개발, 데이터 분석, 프로젝트 관리"
                         className="w-full px-3 py-2 border rounded-lg bg-background font-semibold"
                       />
-                      
+
                       <textarea
                         value={skill.description}
-                        onChange={(e) => updateSkill(index, 'description', e.target.value)}
+                        onChange={(e) =>
+                          updateSkill(index, "description", e.target.value)
+                        }
                         placeholder="예: React와 TypeScript를 활용한 모던 웹 애플리케이션 개발"
                         className="w-full px-3 py-2 border rounded-lg bg-background resize-none"
                         rows={2}
                       />
                     </div>
-                    
+
                     <button
                       onClick={() => removeSkill(index)}
                       className="p-2 text-destructive hover:bg-destructive/10 rounded-lg"
@@ -630,7 +866,7 @@ export function About() {
                   </div>
                 )
               })}
-              
+
               <button
                 onClick={addSkill}
                 className="w-full py-3 border-2 border-dashed rounded-lg hover:border-primary hover:bg-primary/5 transition-all"
@@ -639,7 +875,7 @@ export function About() {
                 스킬 추가
               </button>
             </div>
-            
+
             <div className="mt-6 pt-4 border-t">
               <p className="text-sm text-muted-foreground mb-4">
                 💡 팁: 아이콘을 선택하고 제목과 설명을 입력하세요. 필요한 만큼 자유롭게 추가할 수 있습니다.
@@ -653,12 +889,12 @@ export function About() {
                 </button>
                 <button
                   onClick={async () => {
-                    const success = await saveToFile('about', 'Info', aboutInfo)
+                    const success = await saveToFile("about", "Info", aboutInfo)
                     if (success) {
-                      alert('✅ 소개 설정이 파일에 저장되었습니다!')
+                      alert("✅ 소개 설정이 파일에 저장되었습니다!")
                       setShowSkillModal(false)
                     } else {
-                      alert('❌ 파일 저장에 실패했습니다.')
+                      alert("❌ 파일 저장에 실패했습니다.")
                     }
                   }}
                   className="flex-1 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 font-medium"
@@ -670,7 +906,7 @@ export function About() {
           </div>
         </div>
       )}
-      
+
       {/* 취미 편집 모달 */}
       {showHobbyModal && isEditMode && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[2147483647]">
@@ -684,10 +920,13 @@ export function About() {
                 <X className="h-5 w-5" />
               </button>
             </div>
-            
+
             <div className="space-y-3">
               {aboutInfo.hobbies.map((hobby, index) => (
-                <div key={index} className="flex items-center gap-3 p-3 border rounded-lg">
+                <div
+                  key={index}
+                  className="flex items-center gap-3 p-3 border rounded-lg"
+                >
                   <input
                     type="text"
                     value={hobby}
@@ -695,7 +934,7 @@ export function About() {
                     placeholder="예: 📚 독서"
                     className="flex-1 px-3 py-2 border rounded-lg bg-background"
                   />
-                  
+
                   <button
                     onClick={() => removeHobby(index)}
                     className="p-2 text-destructive hover:bg-destructive/10 rounded-lg"
@@ -704,7 +943,7 @@ export function About() {
                   </button>
                 </div>
               ))}
-              
+
               <button
                 onClick={addHobby}
                 className="w-full py-3 border-2 border-dashed rounded-lg hover:border-primary hover:bg-primary/5 transition-all"
@@ -713,18 +952,42 @@ export function About() {
                 취미 추가
               </button>
             </div>
-            
+
             <div className="mt-6 pt-4 border-t">
               <div className="mb-4">
                 <p className="text-sm font-medium mb-2">🎯 취미 예시:</p>
                 <div className="flex flex-wrap gap-2">
-                  {['📚 독서', '☕ 카페 투어', '🎨 전시회 관람', '✈️ 여행', '🏃 러닝', '📸 사진', '🎮 게임', '🎬 영화 감상', '🎵 음악 감상', '🍳 요리', '🌱 가드닝', '🏊 수영', '🧘 요가', '🎸 기타 연주', '✍️ 글쓰기', '🏕️ 캠핑', '🎭 연극 관람', '🎪 공연 관람', '🚴 자전거', '⛷️ 스키'].map((example) => (
+                  {[
+                    "📚 독서",
+                    "☕ 카페 투어",
+                    "🎨 전시회 관람",
+                    "✈️ 여행",
+                    "🏃 러닝",
+                    "📸 사진",
+                    "🎮 게임",
+                    "🎬 영화 감상",
+                    "🎵 음악 감상",
+                    "🍳 요리",
+                    "🌱 가드닝",
+                    "🏊 수영",
+                    "🧘 요가",
+                    "🎸 기타 연주",
+                    "✍️ 글쓰기",
+                    "🏕️ 캠핑",
+                    "🎭 연극 관람",
+                    "🎪 공연 관람",
+                    "🚴 자전거",
+                    "⛷️ 스키",
+                  ].map((example) => (
                     <button
                       key={example}
                       className="px-3 py-1 text-sm bg-muted hover:bg-primary/10 rounded-full transition-all"
                       onClick={() => {
                         if (!aboutInfo.hobbies.includes(example)) {
-                          updateAboutInfo('hobbies', [...aboutInfo.hobbies, example])
+                          updateAboutInfo("hobbies", [
+                            ...aboutInfo.hobbies,
+                            example,
+                          ])
                         }
                       }}
                     >
@@ -734,7 +997,8 @@ export function About() {
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                💡 팁: 이모지와 함께 취미를 입력하세요. 예시를 클릭하면 새 취미가 추가됩니다.
+                💡 팁: 이모지와 함께 취미를 입력하세요. 예시를 클릭하면 새
+                취미가 추가됩니다.
               </p>
               <div className="flex gap-2">
                 <button
@@ -745,12 +1009,12 @@ export function About() {
                 </button>
                 <button
                   onClick={async () => {
-                    const success = await saveToFile('about', 'Info', aboutInfo)
+                    const success = await saveToFile("about", "Info", aboutInfo)
                     if (success) {
-                      alert('✅ 소개 설정이 파일에 저장되었습니다!')
+                      alert("✅ 소개 설정이 파일에 저장되었습니다!")
                       setShowHobbyModal(false)
                     } else {
-                      alert('❌ 파일 저장에 실패했습니다.')
+                      alert("❌ 파일 저장에 실패했습니다.")
                     }
                   }}
                   className="flex-1 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 font-medium"
