@@ -15,7 +15,7 @@ export function Projects() {
   const defaultInfo = {
     title: "프로젝트",
     subtitle: "프로젝트",
-    initialDisplay: 6,
+    initialDisplay: 3,
     loadMoreCount: 3,
     background: {"image":"","video":"","color":"","opacity":0.1},
     projects: [{"image":"/uploads/project-1765116585429-1765116587084.jpeg","video":"","title":"생활가로가 유년기 지역애착심 형성에 미치는 영향 분석-위례신도시와 서울 강북구 삼양동을 중심으로-","description":"아동의 지역애착심 형성에 미치는 요인을 거주지의 생활가로 특성에 따라 나누어 비교 분석하고 생활가로의 형태와 지역애착심 형성 간 상호관계를 탐구함."},{"image":"/uploads/project-1765117526963-1765117527716.jpeg","video":"","title":"해방촌 도시재생 활성화 계획: 재생사업 사후 관리 및 실질적인 주거환경 개선 결과를 중심으로","description":"계획 사업과 실제 진행된 사업을 비교하고 현장 답사를 통해 해방촌 도시재생 사후 관리의 중요도를 분석."},{"image":"/uploads/project-1765117830486-1765117831126.png","video":"","title":"독일 슈투트가르트의 바람길 조성 사업","description":"독일 슈투트가르트 바람길 조성 사업 케이스를 토대로 지리적 특성과 비슷한 우리나라 지역에서의 바람길 적용 방안을 검토함."},{"image":"/uploads/project-1765118385584-1765118386127.png","video":"","title":"부동산 입지 분석: 인생네컷 코엑스점/ 강남역점","description":"점포의 입지, 시계성, 접근성을 달리 설정하여 코엑스몰 실내에 입점한 지점과 강남역 포차거리 골목에 입점한 지점의 임대료, 일평균 매출, 고객의 방문 경로 등을 분석함."},{"image":"/uploads/project-1765118700325-1765118700801.png","video":"","title":"따릉이 이용 빅데이터를 활용한 이용행태 분석","description":"R을 이용한 모빌리티 빅데이터 가공, 분석. 데이터 전처리"}] as Array<{ image: string; video?: string; title: string; description: string }>
