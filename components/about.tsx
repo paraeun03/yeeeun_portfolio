@@ -90,6 +90,46 @@ export function About() {
               </div>
             </CardContent>
           </Card>
+          {/* 카드 4 */}
+          <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+            <CardContent className="p-6 flex items-start space-x-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <GraduationCap className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">유니프렌즈 9기</h3>
+                <p className="text-sm text-primary mb-2">2025.05.14~2025.08.05</p>
+                <p className="text-sm text-muted-foreground">유니세프 사업 홍보단</p>
+              </div>
+            </CardContent>
+          </Card>
+           {/* 카드 5 */}
+          <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+            <CardContent className="p-6 flex items-start space-x-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <GraduationCap className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">한국건설관리학회 제2회 실무아카데미</h3>
+                <p className="text-sm text-primary mb-2">2024.07.08~2024.07.11 (총 24시간)</p>
+                <p className="text-sm text-muted-foreground">부동산 금융, 투자, 건설, 도시개발사업 등의 분야 실무진의 현업 중심 강의 수강</p>
+              </div>
+            </CardContent>
+          </Card>
+
+           {/* 카드 6 */}
+          <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+            <CardContent className="p-6 flex items-start space-x-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <GraduationCap className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">창의적 아이디어 설계 경진대회 입상</h3>
+                <p className="text-sm text-primary mb-2">2022.12.22</p>
+                <p className="text-sm text-muted-foreground">python을 활용한 앱 기능 구현</p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* 3. 핵심 역량 (Skills) */}
