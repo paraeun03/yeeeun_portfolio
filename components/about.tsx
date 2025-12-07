@@ -31,7 +31,7 @@ export function About() {
   ]
 
   return (
-    <section id="about" className="w-full py-20 bg-muted/30">
+    <section id="about" className="bg-gradient-to-b from-white to-blue-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* 1. 섹션 제목 */}
