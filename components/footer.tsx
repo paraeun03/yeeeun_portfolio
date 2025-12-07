@@ -23,13 +23,13 @@ export function Footer() {
   // 기본 데이터
   const defaultInfo = {
     showFooter: true,
-    name: "당신의 이름",
-    description: "당신을 소개하는 짧은 문구를 작성해주세요. ",
+    name: "최예은",
+    description: "- 단국대학교 도시계획부동산학부 4학년 재학생",
     showQuickLinks: true,
     quickLinksTitle: "빠른 링크",
     showContactInfo: true,
     contactTitle: "연락처",
-    phone: "010-9102-4324",
+    phone: "010-0000-0000",
     email: "paraeun03@naver.com",
     location: "서울시 송파구",
     copyright: "© 2025 최예은. All rights reserved.",

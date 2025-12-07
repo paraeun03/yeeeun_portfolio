@@ -67,7 +67,7 @@ export function Hero() {
     backgroundVideo: "",
     backgroundOpacity: 0.1,
     projectButton: "프로젝트 보기",
-    background: {"image":"","video":"","color":"#036635","opacity":0.1}
+    background: {"image":"","video":"","color":"#4cae53","opacity":0.1}
   }
 
   const [backgroundData, setBackgroundData] = useState<{
