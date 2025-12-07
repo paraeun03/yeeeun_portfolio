@@ -61,7 +61,7 @@ export function Hero() {
     greeting: "살기 좋은 도시, 살아가는 부동산을 분석하는",
     name: "최예은",
     title: "단국대 도시계획부동산학부 재학생입니다",
-    description: "",
+    description: "저만의 강점, 스킬을 담았습니다",
     profileImage: "/uploads/hero-profile-1763952312233.png",
     backgroundImage: "",
     backgroundVideo: "",
