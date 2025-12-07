@@ -17,13 +17,8 @@ export function Projects() {
     subtitle: "프로젝트",
     initialDisplay: 6,
     loadMoreCount: 3,
-    background: {
-      image: "",
-      video: "",
-      color: "",
-      opacity: 0.1
-    },
-    projects: [] as Array<{ image: string; video?: string; title: string; description: string }>
+    background: {"image":"","video":"","color":"","opacity":0.1},
+    projects: [{"image":"file:///C:/Users/Jin&Sun/Desktop/%ED%95%99%EA%B5%90/25-2/%ED%94%84%EB%A1%AD%ED%85%8C%ED%81%AC/%EB%8F%84%EC%8B%9C%EB%B0%8F%EC%A7%80%EC%97%AD%EC%97%B0%EA%B5%AC%EB%B0%A9%EB%B2%95_%EC%97%B0%EA%B5%AC%EA%B3%84%ED%9A%8D%EC%84%9C_%EB%8F%84%EC%8B%9C%EA%B3%84%ED%9A%8D%EB%B6%80%EB%8F%99%EC%82%B0%ED%95%99%EB%B6%80_32224688_%EC%B5%9C%EC%98%88%EC%9D%80.pdf","video":"","title":"생활가로가 유년기 지역애착심 형성에 미치는 영향 분석-위례신도시와 서울 강북구 삼양동을 중심으로-","description":"구시가지"}] as Array<{ image: string; video?: string; title: string; description: string }>
   }
 
   const [projectsInfo, setProjectsInfo] = useState(defaultInfo)

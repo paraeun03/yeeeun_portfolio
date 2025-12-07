@@ -38,7 +38,7 @@ export function Contact() {
     title: "단국대 도시계획부동산학부 4학년 재학생",
     company: "",
     experience: "",
-    phone: "010-9102-4324",
+    phone: "010-0000-0000",
     email: "paraeun03@naver.com",
     website: "yeeeun-portfolio.vercel.app",
     location: "서울시 송파구",
