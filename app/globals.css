@@ -1,19 +1,23 @@
 /* Tailwind v4 테마 설정 */
 @theme {
-  /* ... 생략 ... */
-  --color-popover-foreground: hsl(0 0% 3.9%);
-  --color-primary: hsl(160 80% 30%); /* 👈 여기서 primary 색상 변경 */
-  --color-primary-foreground: hsl(0 0% 98%); /* 👈 여기서 글자색 변경 */
-  --color-secondary: hsl(0 0% 96.1%);
-/* ... 생략 ... */
-}
-
-/* CSS 변수 (컴포넌트 호환성) */
-:root {
-  /* ... 생략 ... */
-  --popover-foreground: 0 0% 3.9%;
-  --primary: 160 80% 30%; /* 👈 여기서 primary 색상 변경 (hsl 없이 숫자만) */
-  --primary-foreground: 0 0% 98%; /* 👈 여기서 글자색 변경 */
-  --secondary: 0 0% 96.1%;
-/* ... 생략 ... */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 3.9%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 3.9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 3.9%); /* <--- 여기부터 오류 시작점이었음 */
+  --primary: hsl(0 0% 9%);
+  --primary-foreground: hsl(0 0% 98%);
+  --secondary: hsl(0 0% 96.1%);
+  --secondary-foreground: hsl(0 0% 9%);
+  --muted: hsl(0 0% 96.1%);
+  --muted-foreground: hsl(0 0% 45.1%);
+  --accent: hsl(0 0% 96.1%);
+  --accent-foreground: hsl(0 0% 9%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(0 0% 89.8%);
+  --input: hsl(0 0% 89.8%);
+  --ring: hsl(0 0% 3.9%);
+  --radius: 0.5rem;
 }
